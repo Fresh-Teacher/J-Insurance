@@ -189,6 +189,46 @@
     }
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const countdownEndDate = new Date('2023-12-30T00:00:00Z').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeDifference = countdownEndDate - now;
+
+      if (timeDifference > 0) {
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        // Change the message and add a line break
+        document.getElementById('countdown').innerHTML = `This website is currently hosted on a temporary link, and it will be deleted in the next 24 hours.<br>If you are the developer, we recommend purchasing a domain name to avoid losing your content and ensure uninterrupted access for your users.<br>The website will be deleted in <span class="modal-message">${hours} Hours, ${minutes} Minutes, and ${seconds} Seconds.</span>`;
+      } else {
+        // Change the message when the time ends
+        const deletedMessage = document.createElement('p');
+        deletedMessage.className = 'modal-message';
+        deletedMessage.innerHTML = 'This website has been deleted from our temporary link. Please purchase a domain name to ensure uninterrupted access for your users.';
+        document.getElementById('countdown').replaceWith(deletedMessage);
+        // Remove the "Ok, I understand" button
+        document.querySelector('.modal-footer').remove();
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    $('#maintenanceModal').modal({
+      backdrop: 'static',
+      keyboard: false
+    });
+
+    // Add click event for animated "Buy New Domain" button
+    document.getElementById('buyNewDomainBtn').addEventListener('click', function () {
+      // Replace 'YOUR_DOMAIN_REGISTRAR_URL' with the actual URL of the domain registrar
+      window.location.href = 'https://www.godaddy.com/';
+    });
+  });
+  
   /**
    * Animation on scroll
    */

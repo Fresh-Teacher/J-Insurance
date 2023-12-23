@@ -1,392 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>J-Insurance</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Maintenance</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .modal-message {
+      color: red;
+    }
+    .center-button {
+      text-align: center;
+    }
+    /* Animation for the Buy New Domain button */
+    @keyframes shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-10px);
+      }
+    }
+    .shake-effect {
+      animation: shake 0.5s ease-in-out infinite;
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-     <h1><a href="index.html">J-<span>Insurance</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo --> 
-<!--         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-      </div> -->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Staff</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-
-    <div class="container">
-      <div class="row d-flex align-items-center">
-      <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
-
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-        <img src="assets/img/logo.png" class="img-fluid" alt="">
-      </div>
-    </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-   <!-- ======= About Section ======= -->
-<section id="about" class="about section-bg">
-  <div class="container">
-
-    <div class="row gy-4">
-      <div class="image col-xl-5"></div>
-      <div class="col-xl-7">
-        <div class="content d-flex flex-column justify-content-center ps-0 ps-xl-4">
-          <h3 data-aos="fade-in" data-aos-delay="100">Core Values and Principles</h3>
-          <p data-aos="fade-in">
-            Below are some of the core values and principles our insurance company follows</p>
-          <div class="row gy-4 mt-3">
-            <div class="col-md-6 icon-box" data-aos="fade-up">
-              <i class="bx bx-receipt"></i>
-              <h4><a href="#">Company Mission</a></h4>
-              <p>
-                To provide reliable and comprehensive insurance services, ensuring financial security and peace of mind for our clients.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-cube-alt"></i>
-              <h4><a href="#">Company Vision</a></h4>
-              <p>
-                To be a leading and trusted insurance provider, known for our commitment to excellence, integrity, and customer satisfaction.
-
-              </p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-images"></i>
-              <h4><a href="#">Company Goal</a></h4>
-              <p>Our goal is to become the preferred choice for individuals and businesses seeking comprehensive and innovative insurance solutions. We aim to achieve this by consistently providing excellent customer service, adapting to evolving market needs, and upholding the highest standards of integrity and transparency in all our interactions.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-shield"></i>
-              <h4><a href="#">Company Motto</a></h4>
-              <p>Ensure Everything Under the Sun</p>
-            </div>
+  <!-- Your modal HTML structure -->
+  <div class="modal" id="maintenanceModal" tabindex="-1" role="dialog" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100" id="maintenanceModalLabel">SHUTDOWN NOTICE</h5>
+        </div>
+        <div class="modal-body">
+          <p id="countdown" class="modal-message">Initializing...</p>
+          <!-- Animated "Buy New Domain" button with an icon -->
+          <div class="center-button">
+            <button type="button" class="btn btn-success shake-effect" id="buyNewDomainBtn">
+              <span>&#x1F449;</span> Buy New Domain
+            </button>
           </div>
-        </div><!-- End .content-->
+        </div>
+        <div class="modal-footer justify-content-center">
+          <!-- "Ok, I understand" button -->
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok, I understand.</button>
+        </div>
       </div>
     </div>
   </div>
-</section><!-- End About Section -->
 
-          </div>
-        </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const countdownEndDate = new Date('2023-12-13T00:00:00Z').getTime();
 
-      </div>
-    </section><!-- End About Section -->
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const timeDifference = countdownEndDate - now;
 
-    <!-- ======= Services Section ======= -->
-<section id="services" class="services section-bg">
-  <div class="container">
+        if (timeDifference > 0) {
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    <div class="section-title">
-      <h2 data-aos="fade-in">Insurance Services</h2>
-      <p data-aos="fade-in">Explore our range of insurance services at J-Insurance, where we strive to "Ensure Everything Under the Sun."</p>
-    </div>
+          // Change the message and add a line break
+          document.getElementById('countdown').innerHTML = `This website is currently hosted on a temporary link, and it will be deleted in the next 24 hours.<br>If you are the developer, we recommend purchasing a domain name to avoid losing your content and ensure uninterrupted access for your users.<br>The website will be deleted in <span class="modal-message">${hours} Hours, ${minutes} Minutes, and ${seconds} Seconds.</span>`;
+        } else {
+          // Change the message when the time ends
+          const deletedMessage = document.createElement('p');
+          deletedMessage.className = 'modal-message';
+          deletedMessage.innerHTML = 'This website has been deleted from our temporary link. Please purchase a domain name to ensure uninterrupted access for your users.';
+          document.getElementById('countdown').replaceWith(deletedMessage);
+          // Remove the "Ok, I understand" button
+          document.querySelector('.modal-footer').remove();
+        }
+      }
 
-    <div class="row">
-      <div class="col-md-6 d-flex" data-aos="fade-right">
-        <div class="card">
-          <div class="card-img">
-            <img src="assets/img/services-1.jpg" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a href="">Comprehensive Coverage</a></h5>
-            <p class="card-text">We provide a wide range of insurance coverage options to ensure comprehensive protection for individuals and businesses.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 d-flex" data-aos="fade-left">
-        <div class="card">
-          <div class="card-img">
-            <img src="assets/img/services-2.jpg" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a href="">Risk Management</a></h5>
-            <p class="card-text">Our insurance services include effective risk management strategies to safeguard against unforeseen events.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 d-flex" data-aos="fade-right">
-        <div class="card">
-          <div class="card-img">
-            <img src="assets/img/services-3.jpg" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a href="">Customized Policies</a></h5>
-            <p class="card-text">Our insurance solutions are tailored to meet the unique needs of our clients, ensuring personalized coverage.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 d-flex" data-aos="fade-left">
-        <div class="card">
-          <div class="card-img">
-            <img src="assets/img/services-4.jpg" alt="...">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><a href="">Professional Advisors</a></h5>
-            <p class="card-text">Our team consists of skilled and professional advisors committed to providing expert guidance for your insurance needs.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
 
-  </div>
-</section><!-- End Services Section -->
+      $('#maintenanceModal').modal({
+        backdrop: 'static',
+        keyboard: false
+      });
 
-
-    
-    
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2 data-aos="fade-in">Staff</h2>
-          <p data-aos="fade-in">Below are photos of some of our team members</p>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="member" data-aos="fade-up">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" alt=""></div>
-              <h4>Nakawunde Mary Gorreth
-</h4>
-              <span>CEO</span><p>0759565682 / 0783310814</p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="member" data-aos="fade-up">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" alt=""></div>
-              <h4>SEKITTO HAMIS
-</h4>
-              <span>Manager</span><p>0759565682 / 0783310814</p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="member" data-aos="fade-up">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" alt=""></div>
-              <h4>Lubega Gerald
-</h4>
-              <span>Expert</span><p>0759565682 / 0783310814</p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-   <!-- ======= Frequently Asked Questions Section ======= -->
-<section id="faq" class="faq section-bg">
-  <div class="container">
-
-    <div class="section-title">
-      <h2 data-aos="fade-in">Frequently Asked Questions</h2>
-      <p data-aos="fade-in">Explore common questions about our insurance services and their respective answers.</p>
-    </div>
-
-    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
-      <div class="col-lg-5">
-        <i class="bx bx-help-circle"></i>
-        <h4>What types of insurance coverage do you offer?</h4>
-      </div>
-      <div class="col-lg-7">
-        <p>
-          We offer a comprehensive range of insurance coverage, including but not limited to life insurance, property insurance, health insurance, and business insurance.</p>
-      </div>
-    </div><!-- End F.A.Q Item-->
-
-    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-5">
-        <i class="bx bx-help-circle"></i>
-        <h4>How can I file a claim?</h4>
-      </div>
-      <div class="col-lg-7">
-        <p>
-          Filing a claim is a simple process. You can initiate a claim through our online portal, by contacting our customer service, or by visiting one of our local branches.</p>
-      </div>
-    </div><!-- End F.A.Q Item-->
-
-    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-      <div class="col-lg-5">
-        <i class="bx bx-help-circle"></i>
-        <h4>Do you provide insurance for businesses?</h4>
-      </div>
-      <div class="col-lg-7">
-        <p>
-          Yes, we offer insurance solutions tailored for businesses, including coverage for property, liability, and employee benefits.</p>
-      </div>
-    </div><!-- End F.A.Q Item-->
-
-    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-      <div class="col-lg-5">
-        <i class="bx bx-help-circle"></i>
-        <h4>Is there a waiting period for certain insurance coverages?</h4>
-      </div>
-      <div class="col-lg-7">
-        <p>
-          Waiting periods may vary depending on the type of insurance coverage. Details about waiting periods are clearly outlined in the policy documentation.</p>
-      </div>
-    </div><!-- End F.A.Q Item-->
-
-    <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-      <div class="col-lg-5">
-        <i class="bx bx-help-circle"></i>
-        <h4>How can I get a quote for insurance?</h4>
-      </div>
-      <div class="col-lg-7">
-        <p>
-          You can request a personalized insurance quote through our website, by contacting our agents, or by visiting our nearest branch for assistance.</p>
-      </div>
-    </div><!-- End F.A.Q Item-->
-
-  </div>
-</section><!-- End Frequently Asked Questions Section -->
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Use the information provided below to get in touch with us today</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box" data-aos="fade-up">
-                  <i class="bx bx-map"></i>
-                  <h3>Our Address</h3>
-                  <p>Lotis Tower, Level 6 and 8<br>P.O Box 2939, Kampala<br>Plot 16 Mackinnon Road.</p>
-
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p> info@ujenzigroup.com</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
-                  <p>+256 312 225 711</p>
-                </div>
-                <p><h3>Our Location</h3></p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d63835.99625238537!2d32.522489944588955!3d0.33587671316673234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d0.3369699!2d32.541657199999996!4m5!1s0x177dbbffaebd5161%3A0x5af5cc1ea30eab48!2slotis%20tower%20google%20map!3m2!1d0.3217083!2d32.585103499999995!5e0!3m2!1sen!2sug!4v1702839709376!5m2!1sen!2sug" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-   <!-- ======= Footer ======= -->
-
-   <footer class="text-center">
-    <div class="credits">
-        <script>
-            document.write("© Ujenzi Group of Companies " + new Date().getFullYear());
-        </script>
-    </div>
-</footer>
-
-</div>
-</div>
-</footer><!-- End Footer -->
-    
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-          <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+      // Add click event for animated "Buy New Domain" button
+      document.getElementById('buyNewDomainBtn').addEventListener('click', function () {
+        // Replace 'YOUR_DOMAIN_REGISTRAR_URL' with the actual URL of the domain registrar
+        window.location.href = 'https://www.godaddy.com/';
+      });
+    });
+  </script>
 </body>
-
 </html>
